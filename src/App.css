@@ -1,38 +1,155 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  background-color: lightskyblue;
+}
+
+.row {  
+  display: flex;
+  flex-wrap: row;
+}
+
+.side {
+  flex: 20%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.main {
+  flex: 80%;
+  background-color: lightgrey;
+  padding: 20px;
+}
+
+h1 {
+  background-color: lightskyblue;
+  margin-left: 5px;
+}
+
+.inputForm {
+  float: left;
+  min-width: 200px;
+  height: 200px;
+  line-height: 10px;
+  background-color: lightslategrey;
+}
+
+.textInput {
+  margin-left: 0px;
+  height: 20px;
+  background-color: aqua;
+}
+
+.optionInput {
+  background-color: beige;
+  height: 30px;
+  border-color: black;
+  color: maroon;
+}
+
+.list {
+  float: right;
+  margin-right: 120px;
+}
+
+.btn {
+  display: inline-block;
+  background: lightskyblue;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: opacity 0.2s ease-in;
+}
+
+.btn-remove {
+  display: inline-block;
+  background: lightskyblue;
+  color: #333;
+  font-size: 15px;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  transition: opacity 0.2s ease-in;
+}
+
+.item-enter {
+  opacity: 0;
+}
+
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.item-exit {
+  opacity: 1;
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+.navbarLink {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbarLink:hover {
+  background-color: #ddd;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+table {
+  border: 0.5px solid black;
+  width: 800px;
+  text-align: center;
+}
+
+th, td {
+  border: 0.5px solid black;
+  height: 10px;
+  width: 200px
+}
+
+th {
+  font-size: 20px;
+  color: maroon;
+}
+
+.shortlistTable {
+  border: 0.5px solid black;
+  width: 800px;
+  text-align: center;
+  margin-left: 5px;
+  background-color: lightgrey;
+}
+
+@media screen and (max-width: 700px) {
+  .row, .navbar .main {   
+    flex-direction: column;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 700px) {
+    table {
+      width: 400px;
+    }
+    th td {
+      width: 100px;
+      height: auto;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
