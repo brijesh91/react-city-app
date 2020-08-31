@@ -4,8 +4,6 @@ import CityContext from '../../context/city/cityContext'
 const CityForm = () => {
 
     const cityContext = useContext(CityContext)
-
-    console.log(cityContext)
     
     const [city, setCity ] = useState({
         City: '',

@@ -5,8 +5,6 @@ import CityContext from '../../context/city/cityContext'
 const CityItem = ({ city }) => {
     const cityContext = useContext(CityContext)
 
-    console.log('I ran')
-
     const { deleteCity, shortList, deleteShortList, shortlist, clearFilter } = cityContext
     const { City, District, State } = city
 

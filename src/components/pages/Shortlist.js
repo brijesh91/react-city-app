@@ -8,8 +8,6 @@ const Shortlist = () => {
 
     const { shortlist } = cityContext
 
-    console.log(cityContext)
-
     if (shortlist.length === 0) {
         return <h4>Shortlist the cities</h4>
     }

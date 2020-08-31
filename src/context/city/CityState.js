@@ -28,7 +28,6 @@ const CityState = props => {
     const getData = async () => {
         try {
             const res = await axios.get('https://next.json-generator.com/api/json/get/EJX4SGwfK')
-            console.log('this is resposne', res)
             dispatch({
                 type: GET_SUCCESS,
                 payload: res.data.data
@@ -43,7 +42,6 @@ const CityState = props => {
 
     // Add city
     const addCity = city => {
-        console.log(city)
         if(city.City === '' 
             || city.District === ''
             || city.State === ''
